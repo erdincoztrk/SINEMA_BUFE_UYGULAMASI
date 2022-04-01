@@ -47,6 +47,7 @@ namespace SİNEMA_BÜFE_UYGULAMASI
         {
             if(kola > 0)
             {
+                kola--;
                 txtKola.Text = kola.ToString();
             }
         }
@@ -55,7 +56,7 @@ namespace SİNEMA_BÜFE_UYGULAMASI
         {
             if(bcips > 0)
             {
-                kcips--;
+                bcips--;
                 txtBcips.Text = bcips.ToString();
             }
         }
@@ -128,13 +129,13 @@ namespace SİNEMA_BÜFE_UYGULAMASI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            txtSu.Enabled = false;
-            txtKola.Enabled = false;
-            txtBcips.Enabled = false;
-            txtKcips.Enabled = false;
-            txtCikolata.Enabled = false;
-            txtMisir.Enabled = false;
-            button1.Enabled = false;
+            txtSu.Enabled = true;
+            txtKola.Enabled = true;
+            txtBcips.Enabled = true;
+            txtKcips.Enabled = true;
+            txtCikolata.Enabled = true;
+            txtMisir.Enabled = true;
+            button1.Enabled = true;
 
             btnHesap.Enabled = true;
             btnhspduzen.Enabled = false;
@@ -145,7 +146,7 @@ namespace SİNEMA_BÜFE_UYGULAMASI
         private void button1_Click_1(object sender, EventArgs e)
         {
             GunSonu gun = new GunSonu();
-            gun.gunsonuciro.Text = ciro.ToString() + " Adet";
+            gun.gunsonuciro.Text = ciro.ToString() + "TL";
             gun.lblsusatis.Text = susatis.ToString() + " Adet";
             gun.lblkolasatis.Text = kolasatis.ToString() + " Adet";
             gun.lblbcipssatis.Text = bcipssatis.ToString() + " Adet";
@@ -210,6 +211,14 @@ namespace SİNEMA_BÜFE_UYGULAMASI
             btnNew.Enabled = false;
             btnhspduzen.Enabled = false;
             button1.Enabled = true;
+
+            txtSu.Enabled = true;
+            txtBcips.Enabled = true;
+            txtKcips.Enabled = true;
+            txtMisir.Enabled = true;
+            txtCikolata.Enabled = true;
+            txtKola.Enabled = true;
+
         }
 
         private void btnHesap_Click(object sender, EventArgs e)
